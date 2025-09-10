@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebook - Máy Tính và Cộng Đồng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            line-height: 1.6;
+        }
+        .page {
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+            position: relative;
+            display: none; /* Ẩn tất cả các trang ban đầu */
+        }
+        .page.active {
+            display: block; /* Hiển thị trang đang hoạt động */
+        }
+        .page-header {
+            background-color: #e6f7ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .page-header h1 {
+            color: #007bff;
+            font-size: 24px;
+            margin: 0;
+        }
+        .page-header h2 {
+            font-size: 20px;
+            margin: 0;
+            margin-left: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section-header {
+            color: #333;
+            font-size: 22px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            font-weight: bold; /* Làm nổi bật tiêu đề */
+            color: #1a5276; /* Đổi màu tiêu đề */
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+        }
+        .text-column {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .image-container {
+            flex-shrink: 0;
+            margin-left: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .page-number {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 14px;
+            color: #888;
+        }
+        .navigation {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 5px;
+            transition: background-color 0.3s ease;
+        }
+        .nav-button:hover {
+            background-color: #0056b3;
+        }
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Page 1 -->
+<div class="page" id="page-1">
+    <div class="page-header">
+        <h1>CHỦ ĐỀ 1. MÁY TÍNH VÀ CỘNG ĐỒNG</h1>
+    </div>
+
+    <div class="section">
+        <h2 style="color: #4CAF50;">BÀI 1</h2>
+        <h1 style="color: #4CAF50;">THẾ GIỚI KỸ THUẬT SỐ</h1>
+
+        <h3>Sau bài học này em sẽ:</h3>
+        <ul>
+            <li>Nhận biết được sự có mặt của các thiết bị có gắn bộ xử lí thông tin ở khắp nơi và nêu được ví dụ minh họa.</li>
+            <li>Nêu được khả năng của máy tính và chỉ ra được một số ứng dụng thực tế của nó trong khoa học kỹ thuật và đời sống.</li>
+            <li>Giải thích được tác động của công nghệ thông tin lên giáo dục và xã hội thông qua các ví dụ cụ thể.</li>
+        </ul>
+
+        <p><strong>An:</strong> Bộ xử lí là thành phần quan trọng của máy tính, thường được gọi là "bộ não" của máy tính. Nhưng liệu có phải chỉ máy tính mới có bộ xử lí không?</p>
+        <p><strong>Khoa:</strong> Bộ xử lí không chỉ xuất hiện trong máy tính để bàn hoặc máy tính xách tay mà nhiều thiết bị điện tử khác cũng cần bộ xử lí để hoạt động như ti vi kết nối hay robot quét nhà...</p>
+        <p><strong>An:</strong> Thế thì còn nhiều thiết bị nữa có gắn bộ xử lí ở xung quanh chúng ta.</p>
+    </div>
+    
+    <div class="section">
+        <div class="section-header">
+            1. THẾ GIỚI KỸ THUẬT SỐ
+        </div>
+        
+        <p><strong>Hoạt động 1</strong> Tìm hiểu ti vi kĩ thuật số</p>
+        
+        <div class="content">
+            <div class="text-column">
+                <p>Hầu hết ti vi được sử dụng hiện nay là ti vi kĩ thuật số (Hình 1.1). Em hãy tìm hiểu và cho biết:</p>
+                <ol>
+                    <li>Thông tin đầu vào nào được ti vi tiếp nhận từ bộ điều khiển?</li>
+                    <li>Ti vi thể hiện sự thay đổi ở đâu ra như thế nào?</li>
+                    <li>Ti vi có thực hiện thao tác xử lí thông tin không?</li>
+                </ol>
+            </div>
+            <div class="image-container">
+                <img src="https://i.postimg.cc/pdhqgq57/h1.png" alt="Hình 1.1 TV kỹ thuật số">
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="text-column">
+                <p>Khi em nhấn nút chuyển kênh ti vi trên bộ điều khiển từ xa, ti vi sẽ nhận được thông tin. Xử lí thông tin này, ti vi sẽ chuyển sang kênh mà em yêu cầu. Để làm việc đó, ti vi phải được gắn một bộ xử lí thông tin.</p>
+                <p>Bộ xử lí thông tin (hay thường gọi là bộ xử lí) là thành phần quan trọng của máy tính. Bộ xử lí làm việc với dữ liệu được biểu diễn dưới dạng dãy bit. Tuy nhiên, bộ xử lí không chỉ xuất hiện trong máy tính hay điện thoại thông minh mà còn được gắn vào các thiết bị khác để hỗ trợ xử lí bất kì loại thông tin nào có thể số hóa được.</p>
+                <p>• Trong nhà, nhiều thiết bị điện như ti vi, tủ lạnh, máy giặt... được gắn bộ xử lí để có thêm nhiều tính năng và vận hành một cách linh hoạt. Hiện nay, nhiều thiết bị điện thông dụng như bếp điện, nồi cơm điện, thậm chí đèn, quạt... cũng có thể được gắn bộ xử lí để có thêm nhiều tính năng tiện lợi hơn.</p>
+            </div>
+        </div>
+    </div>
+    <div class="page-number">5</div>
+</div>
+
+<!-- Page 2 -->
+<div class="page" id="page-2">
+    <div class="page-header">
+        <h1>CHỦ ĐỀ 1. MÁY TÍNH VÀ CỘNG ĐỒNG</h1>
+    </div>
+
+    <div class="section">
+        <h2 style="color: #4CAF50;">BÀI 1</h2>
+        <h1 style="color: #4CAF50;">THẾ GIỚI KỸ THUẬT SỐ</h1>
+        <p>hệ thống nhận dạng khuôn mặt trong các cơ quan, tổ chức; máy chiếu trong lớp học; bảng điện tử hiển thị thông tin chuyến bay; máy rút tiền tự động (ATM) của ngân hàng; hệ thống thu phí tự động trên đường cao tốc... là những ví dụ cho thấy thiết bị có gắn bộ xử lí thông tin xuất hiện trong mọi lĩnh vực của đời sống.</p>
+        <p>• Hệ thống thanh toán trên siêu thị, hệ thống bảng chuyển tự động trong cổng nghiệp, hệ thống máy lập rập tự động hay hệ thống phun tưới vườn và những hệ thống tương tự khác...</p>
+        <p>... là những ví dụ về thiết bị có gắn bộ xử lí trong thương mại, sản xuất công nghiệp và nông nghiệp hiện đại.</p>
+        <p>Những thiết bị có gắn bộ xử lí hiện diện xung quanh ta và ngày càng trở nên quen thuộc. Chúng có thể là những vật dụng cá nhân, đồ dùng trong gia đình hay những thiết bị chuyên dụng trong hầu hết các lĩnh vực như công nghiệp, nông nghiệp, thương mại, giáo dục, y tế, giao thông.... Sự đa dạng của các thiết bị đó tạo nên thế giới kĩ thuật số.</p>
+        <p>Thiết bị được gắn bộ xử lí hiện diện xung quanh ta. Chúng giúp con người tự động hoá một phần hoạt động xử lí thông tin và xuất hiện trong hầu hết các lĩnh vực kinh tế, xã hội và đời sống....</p>
+        
+        <ol>
+            <li>Em hãy ghép mỗi cụm từ ở ô trái với cụm từ ở ô phải để có mô hình phù hợp.</li>
+            <li>Những thiết bị trong Hình 1.2 thường xuất hiện ở nơi nào trong thực tế?</li>
+        </ol>
+
+        <div class="image-grid">
+            <img src="https://i.postimg.cc/52M4HRb5/Capture.png" alt="Hình 1.2 Thiết bị có bộ xử lí">
+        </div>
+
+        <p style="text-align: center;">Hình 1.2: Thiết bị có bộ xử lí</p>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            2. ỨNG DỤNG THỰC TẾ CỦA MÁY TÍNH TRONG KHOA HỌC KĨ THUẬT VÀ ĐỜI SỐNG
+        </div>
+        <p><strong>Hoạt động 2</strong> Máy tính thật là cần thiết</p>
+        <p>Em hãy nêu một số khả năng của máy tính mà nhờ đó máy tính có thể hỗ trợ con người một cách đắc lực trong cuộc sống.</p>
+        
+        <p><strong>a) Khả năng của máy tính</strong></p>
+        <p>Máy tính là thiết bị điện tử có thể hỗ trợ tích cực nhiều hoạt động của con người do có các khả năng tính toán nhanh, chính xác; lưu trữ dung lượng lớn; kết nối toàn cầu với tốc độ cao.</p>
+        
+        <ul>
+            <li>Máy tính có thể thực hiện hàng tỉ phép tính trong một giây một cách biến đổi với độ chính xác cao, giúp con người giải quyết những bài toán phức tạp.</li>
+            <li>Máy tính có thể lưu trữ và xử lí nhiều loại dữ liệu như văn bản, hình ảnh, âm thanh, video... với dung lượng lớn và có thể truy xuất nhanh chóng khi cần thiết.</li>
+        </ul>
+    </div>
+    <div class="page-number">6</div>
+</div>
+
+<!-- Page 3 -->
+<div class="page" id="page-3">
+    <div class="page-header">
+        <h1>CHỦ ĐỀ 1. MÁY TÍNH VÀ CỘNG ĐỒNG</h1>
+    </div>
+    <div class="section">
+        <p>• Máy tính có thể kết nối với nhau, tạo thành mạng máy tính toàn cầu Internet và truy cập các nguồn thông tin, dịch vụ và giải trí phong phú trên môi trường đó.</p>
+        <p><strong>b) Ứng dụng của máy tính trong khoa học kĩ thuật và đời sống</strong></p>
+        <p>Sự phát triển nhanh của công nghệ máy tính làm cho nó trở thành công cụ đắc lực hỗ trợ hoạt động của con người trong hầu hết các lĩnh vực. Ví dụ:</p>
+        <p>• Hệ thống tính năng cao được sử dụng để tính toán trong khoa học và kĩ thuật như mô phỏng dòng chảy của chất lỏng, chất khí và việc nghiên cứu trong thực tế là rất khó.</p>
+        <p>• Siêu máy tính có thể được sử dụng để thực hiện những tính toán phức tạp trong hoá học, vật lí, công nghệ kết cấu hay dự báo thời tiết...</p>
+        <p>• Công nghệ thông tin được ứng dụng trong các vệ tinh nhân tạo để nghiên cứu vũ trụ. Kính viễn vọng không gian Hubble (Hình 1.3) là một trong những cỗ máy xử lí thông tin đắt tiền nhất được tạo ra.</p>
+
+        <div class="content">
+            <div class="image-container">
+                <img src="https://i.postimg.cc/y6MgPn7x/Capture.png" alt="Hình 1.3 Kính viễn vọng Hubble">
+                <p style="text-align: center;">Hình 1.3: Kính viễn vọng Hubble</p>
+            </div>
+            <div class="image-container">
+                <img src="https://i.postimg.cc/pLZmPHz5/Capture.png" alt="Hình 1.4 ô tô tự động do máy tính điều khiển">
+                <p style="text-align: center;">Hình 1.4: Ô tô tự động do máy tính điều khiển</p>
+            </div>
+        </div>
+
+        <p>• Trong y tế, bác sĩ sử dụng máy tính để điều trị cho con người và chẩn đoán những rối loạn về thể chất và tinh thần. Bệnh viện sử dụng máy tính để quản lí dữ liệu người bệnh và bác sĩ.</p>
+        <p>• Trong nghiên cứu, các nhà khoa học có thể tìm thấy tài liệu tham khảo từ kho dữ liệu được số hoá và được lưu trữ trên thiết bị lưu trữ hoặc internet.</p>
+        <p>• Trong lĩnh vực giao thông, máy tính được sử dụng để điều khiển xe tự động lái (Hình 1.4), điều khiển hệ thống đèn tín hiệu....</p>
+        <p>• Trong cuộc sống hằng ngày, hầu như mọi dịch vụ thiết yếu như gửi hàng, di chuyển, mua thực phẩm, đọc báo... đều có thể tìm được bằng vài lần nháy chuột đơn giản. Nhiều người có thể làm việc tại nhà một cách hiệu quả với sự trợ giúp của máy tính.</p>
+        <p>• Máy tính cung cấp nhiều lựa chọn giải trí nên được nhiều người sử dụng. Thông qua máy tính, em có thể nghe nhạc, xem phim cũng như trò chuyện với bạn bè của mình và chơi những trò chơi hấp dẫn.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            3. TÁC ĐỘNG CỦA CÔNG NGHỆ THÔNG TIN LÊN GIÁO DỤC VÀ XÃ HỘI
+        </div>
+        <p><strong>Hoạt động 3</strong> Tác động của công nghệ thông tin</p>
+        <p>Em hãy kể một số ví dụ cho thấy tác động của công nghệ thông tin lên giáo dục và xã hội.</p>
+    </div>
+    <div class="page-number">7</div>
+</div>
+
+<!-- Page 4 -->
+<div class="page active" id="page-4">
+    <div class="page-header">
+        <h1>CHỦ ĐỀ 1. MÁY TÍNH VÀ CỘNG ĐỒNG</h1>
+    </div>
+    <div class="section">
+        <p>• Công nghệ thông tin được con người sử dụng để khám phá tri thức mới, kết nối cá nhân với thế giới, hỗ trợ trong học tập và lao động. Về khía cạnh này, công nghệ thông tin mang lại phương tiện mới, giúp con người dễ dàng giao tiếp với nhau. Nếu chúng ta biết sử dụng công nghệ thông tin một cách tích cực, nguồn lực đó sẽ phát triển, làm cho cuộc sống của chúng ta trở nên dễ dàng hơn nhiều.</p>
+        <p>• Công nghệ thông tin đem đến những phương tiện giao tiếp hiệu quả như: thư điện tử, tin nhắn, mạng xã hội... giúp con người giảm bớt sự phụ thuộc vào không gian và thời gian. Ngày nay, mọi người đều có thể trò chuyện và nhìn thấy người thân của mình một cách dễ dàng ngay cả khi họ ở rất xa nhau, thậm chí cả khi họ đang di chuyển.</p>
+        <p>• Công nghệ thông tin còn giúp con người dễ dàng chuyển giao và tiếp cận thông tin.</p>
+        <p>Trong giáo dục, công nghệ thông tin giúp con người chia sẻ kiến thức, kĩ năng và có thể để sống tích cực. Ngoài ra, mọi người có thể bổ sung sự hiểu biết của mình về bất kì lĩnh vực nào, ở mọi nơi, vào mọi lúc bằng cách sử dụng Internet. Nhiều dữ liệu hiện có trên Internet là miễn phí.</p>
+        <p>Tuy nhiên, việc sử dụng công nghệ không đúng cách và thiếu trách nhiệm có thể đem lại những tác động tiêu cực như ảnh hưởng xấu đến sức khoẻ thể chất và tinh thần của con người.</p>
+        <p>Nói chung, công nghệ thông tin có tác động tích cực đến con người và xã hội nhiều hơn so với tác động tiêu cực. Tuy nhiên, cách chúng ta sử dụng công nghệ thông tin sẽ quyết định tác động của nó có lợi hay có hại cho xã hội.</p>
+    </div>
+
+    <div class="section">
+        <p style="border-left: 5px solid #007bff; padding-left: 10px;">
+            <strong>&nbsp;</strong>
+            Công nghệ thông tin có tác động mạnh mẽ, đem lại những thay đổi tích cực trong xã hội, trong đó có giáo dục.<br>
+            <strong>&nbsp;</strong>
+            Cần sử dụng công nghệ thông tin đúng cách để tránh những tác động tiêu cực đến cuộc sống.
+        </p>
+    </div>
+
+    <div class="section">
+        <p><strong>Em hãy:</strong></p>
+        <p>a) Kể về một ứng dụng của công nghệ thông tin mà em thường xuyên sử dụng.</p>
+        <p>b) Nêu những tác động tích cực của ứng dụng đó và cách em sử dụng nó hằng ngày.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-header" style="border-bottom: 2px solid #ccc; padding-bottom: 5px; color: #f0830a;">
+            LUYỆN TẬP
+        </div>
+        <p>1. Hãy tưởng tượng, các hoạt động xung quanh em sẽ thay đổi như thế nào khi một ngày các bộ xử lí biến mất, các thiết bị được gắn bộ xử lí không hoạt động nữa?</p>
+        <p>2. Em hãy kể một ví dụ về kiến thức, kĩ năng hoặc nội dung thú vị, có nhiều ý nghĩa mà em học được từ nguồn thông tin trên Internet.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-header" style="border-bottom: 2px solid #ccc; padding-bottom: 5px; color: #008080;">
+            VẬN DỤNG
+        </div>
+        <p>Em hãy tìm hiểu và trả lời các câu hỏi sau:</p>
+        <p>a) Đồng hồ thông minh có những chức năng nào khác với đồng hồ thông thường?</p>
+        <p>b) Tại sao đồng hồ thông minh cần có bộ xử lí?</p>
+    </div>
+
+    <div class="page-number">8</div>
+</div>
+
+<!-- Navigation Controls -->
+<div class="navigation">
+    <button id="prev-btn" class="nav-button" disabled>Trang trước</button>
+    <button id="next-btn" class="nav-button">Trang sau</button>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const pages = document.querySelectorAll('.page');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        let currentPageIndex = 0;
+
+        function showPage(index) {
+            pages.forEach((page, i) => {
+                page.classList.toggle('active', i === index);
+            });
+            prevBtn.disabled = index === 0;
+            nextBtn.disabled = index === pages.length - 1;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (currentPageIndex > 0) {
+                currentPageIndex--;
+                showPage(currentPageIndex);
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentPageIndex < pages.length - 1) {
+                currentPageIndex++;
+                showPage(currentPageIndex);
+            }
+        });
+
+        // Initialize with the first page
+        showPage(currentPageIndex);
+    });
+</script>
+
+</body>
+</html>
